@@ -6,8 +6,12 @@
 
 <ul>
   <% @ratings.each do |rating| %>
+  <%if User.find_by_id(rating.user_id).nil?%>
+  <%# ei toimi jos kysyy kannasta id:lla jota ei ole, hack fixi jee.%>
+  <li> Mein Gott! </li>
+  <% else %>
   <li><%= rating %> <%= link_to User.find(rating.user_id).username, user_path(rating.user_id)%></li>
- 
+ <% end %>
   <% end %>
 </ul>
 
