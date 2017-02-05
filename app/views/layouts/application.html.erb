@@ -13,8 +13,17 @@
     <%= link_to 'breweries', breweries_path %>
     <%= link_to 'beers', beers_path %>
     <%= link_to 'ratings', ratings_path %>
+    <%= link_to 'users', users_path %>
+    <% if current_user %>
+    <%= link_to current_user.username, user_path(current_user) %>
+    <%= link_to 'rate a beer', new_rating_path %>
+    <%= link_to 'Signout', current_user, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% else %>
+    <%= link_to 'signin', new_session_path %>
+    <%= link_to 'sign up', new_user_path%>
+   <% end %>
   </div>
-
+ 
   <%= yield %>
 
 </body>
