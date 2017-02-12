@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/BasalGanglia/ratebeer-public.png)](https://travis-ci.org/BasalGanglia/ratebeer-public)
+[![Build Status](https://travis-ci.org/BasalGanglia/wad.png)](https://travis-ci.org/BasalGanglia/wad)
